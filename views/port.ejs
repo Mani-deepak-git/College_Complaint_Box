@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic CSS for Portfolio Page */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .post-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .post h3 {
+            margin: 0 0 10px;
+        }
+
+        .post p {
+            margin: 5px 0;
+        }
+
+        .post-counter {
+            font-weight: bold;
+        }
+
+        .submit-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class=" navbar">
+            <div class="navbar-brand">VIT Complaints</div>
+            <a class="submit-btn" href="/submit-form">Submit a complaint</a>
+        </div>
+    </nav>
+
+    <div class='post-container'>
+        <div class='post'>
+            <h3>Name: <%= complaint.name %>
+            </h3>
+            <p>Roll Number: <%= complaint.registerNo %>
+            </p>
+            <p>Type: <%= complaint.typeOfComplaint %>
+            </p>
+            <p>Department: <%= complaint.department %>
+            </p>
+            <p>Complaint: <%= complaint.complaintText %>
+            </p>
+            <span class='post-counter'> Likes:
+                <%= complaint.likes %>
+            </span> <br /> <br />
+            <a class='submit-button' href='/'> Back to Home </a>
+        </div>
+</body>
+</html>
